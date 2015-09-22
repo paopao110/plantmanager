@@ -6,7 +6,11 @@
 <meta name="description" content="人力资源管理平台" />
 <title>植物管理平台</title>
 <link type="text/css" rel="stylesheet" href="css/css.css" />
+<link rel="stylesheet" type="text/css" href="src/css/themes/default/easyui.css">
+<link rel="stylesheet" type="text/css" href="src/css/themes/default/icon.css">
+<link rel="stylesheet" type="text/css" href="src/css/themes/default/demo.css">
 <script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
+<script type="text/javascript" src="src/js/jquery.easyui.min.js"></script>
 <script type="text/javascript" src="js/jslib/app-core.js"></script>
 </head>
 <body>
@@ -35,7 +39,7 @@
       <div class="title"><img class="icon" src="images/dataicon.jpg" />
         <h2>日历</h2>
       </div>
-      <div class="detail"> <img class="" src="images/kj_01.jpg" /> </div>
+      <div class="detail">  <div class="easyui-calendar" style="width:100%;height:200px;"></div> </div>
     </div>
     <div class="lm03">
       <div class="title"><img style="padding-right:5px;" class="icon" src="images/weaicon.jpg" />
