@@ -12,20 +12,22 @@
 	<script type="text/javascript" src="src/js/jslib/treetable.js"></script>
 </head>
 <body>
-	<table id="tg" class="easyui-treegrid" title="Editable TreeGrid" style="width:700px;height:400px"
+	<table id="tg" class="easyui-treegrid" title="植物分类" style="width:700px;height:600px"
 			data-options="
 				iconCls: 'icon-ok',
 				rownumbers: true,
 				animate: true,
-				collapsible: true,
 				fitColumns: true,
-				pagination:true,
+				toolbar:toolbar,
 				url: 'treegrid_data2.json',
 				method: 'get',
 				idField: 'id',
 				singleSelect:true,
 				treeField: 'name',
-				onContextMenu: onContextMenu">
+				onContextMenu: onContextMenu,
+				pagination: true,
+                pageSize: 2,
+                pageList: [2,5,10]">
 		<thead>
 			<tr>
 				<th data-options="field:'name',width:180,editor:'text'">分类编号</th>

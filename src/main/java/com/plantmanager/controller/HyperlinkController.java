@@ -15,4 +15,28 @@ public class HyperlinkController {
 		request.setAttribute("type", type);
 		return "frame/mainbody";
 	}
+	
+	/**
+	 * 链接子页面
+	 * @param type
+	 * @param request
+	 * @return
+	 */
+	@RequestMapping(value="admin/linkSubBodyPaper")
+	public String linkSubBodyPaper(@RequestParam(value="type") String type,HttpServletRequest request){
+		if(type.equals("11")){
+			return getPlantCategoryPage(request);
+		}
+		return null;
+	}
+	
+	/**
+	 * 获取植物分类页面
+	 * @param request
+	 * @return
+	 */
+	private String getPlantCategoryPage(HttpServletRequest request){
+		
+		return "frame/mainbody-plantcategory";
+	}
 }

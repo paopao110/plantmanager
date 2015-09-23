@@ -1,0 +1,11 @@
+{"total":7,"rows":[
+	{"id":1,"categoryid":"PC","categoryname":"xxxxxxx","categorylevel":0,"categoryremark":"顶级分类","iconCls":"icon-ok"},
+	{"id":2,"categoryid":"PC-00001","categoryname":"xxxxxxx","categorylevel":1,"categoryremark":"一级分类","_parentId":1,"state":"closed"},
+	{"id":21,"categoryid":"PC-0000100001","categoryname":"xxxxxxx","categorylevel":2,"categoryremark":"二级分类","_parentId":2},
+	{"id":22,"categoryid":"PC-0000100002","categoryname":"xxxxxxx","categorylevel":2,"categoryremark":"二级分类","_parentId":2},
+	{"id":23,"categoryid":"PC-0000100003","categoryname":"xxxxxxx","categorylevel":2,"categoryremark":"二级分类","_parentId":2},
+	{"id":3,"categoryid":"Coding","categoryname":"xxxxxxx","categorylevel":0,"categoryremark":"顶级分类","iconCls":"icon-ok"},
+	{"id":4,"categoryid":"Testing","categoryname":"xxxxxxx","categorylevel":0,"categoryremark":"顶级分类","iconCls":"icon-ok"}
+],"footer":[
+	{"categoryid":"Total Persons:","persons":7,"iconCls":"icon-sum"}
+]}

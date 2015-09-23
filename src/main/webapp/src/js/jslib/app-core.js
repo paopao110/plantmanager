@@ -24,3 +24,16 @@ function linkhref(type){
 		async : false
 	});
 }
+
+function linkSubHerf(type){
+	$.ajax({
+		type:"POST",
+		url:"admin/linkSubBodyPaper.html",
+		data:{'type':type},
+		dataType:'html',
+		success : function(obj) {
+			$(".subbody").html(obj);
+		},
+		async : false
+	});
+}
