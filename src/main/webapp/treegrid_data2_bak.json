@@ -1,11 +1,11 @@
-{"total":7,"rows":[
-	{"id":1,"categoryid":"PC","categoryname":"xxxxxxx","categorylevel":0,"categoryremark":"顶级分类","iconCls":"icon-ok"},
-	{"id":2,"categoryid":"PC-00001","categoryname":"xxxxxxx","categorylevel":1,"categoryremark":"一级分类","_parentId":1,"state":"closed"},
-	{"id":21,"categoryid":"PC-0000100001","categoryname":"xxxxxxx","categorylevel":2,"categoryremark":"二级分类","_parentId":2},
-	{"id":22,"categoryid":"PC-0000100002","categoryname":"xxxxxxx","categorylevel":2,"categoryremark":"二级分类","_parentId":2},
-	{"id":23,"categoryid":"PC-0000100003","categoryname":"xxxxxxx","categorylevel":2,"categoryremark":"二级分类","_parentId":2},
-	{"id":3,"categoryid":"Coding","categoryname":"xxxxxxx","categorylevel":0,"categoryremark":"顶级分类","iconCls":"icon-ok"},
-	{"id":4,"categoryid":"Testing","categoryname":"xxxxxxx","categorylevel":0,"categoryremark":"顶级分类","iconCls":"icon-ok"}
-],"footer":[
-	{"categoryid":"Total Persons:","persons":7,"iconCls":"icon-sum"}
-]}
+[{"id":1,"categoryid":"PC","categoryname":"xxxxx","categorylevel":0,"categoryremark":"顶级分类","_parentId":0},
+{"id":2,"categoryid":"PC-00001","categoryname":"xxxxxxx","categorylevel":1,"categoryremark":"一级分类","_parentId":1},
+{"id":3,"categoryid":"PC-0000100001","categoryname":"eeeexxxeeeee","categorylevel":2,"categoryremark":"二级分类","_parentId":2},
+{"id":4,"categoryid":"PCOK","categoryname":"xcxdd","categorylevel":0,"categoryremark":"顶级分类","_parentId":0},
+{"id":5,"categoryid":"PCOKONE","categoryname":"eokoe","categorylevel":0,"categoryremark":"顶级分类","_parentId":4},
+{"id":6,"categoryid":"分类编号6","categoryname":"类别名称1","categorylevel":1,"categoryremark":"一级分类","_parentId":4},
+{"id":7,"categoryid":"PCOK-00001","categoryname":"类别名称3","categorylevel":1,"categoryremark":"一级分类","_parentId":4},
+{"id":8,"categoryid":"分类编号8","categoryname":"类别名称6","categorylevel":2,"categoryremark":"二级分类","_parentId":4},
+{"id":9,"categoryid":"分类编号9","categoryname":"类别名称2","categorylevel":2,"categoryremark":"二级分类","_parentId":4},
+{"id":10,"categoryid":"分类编号10","categoryname":"类别名称3","categorylevel":1,"categoryremark":"一级分类","_parentId":4},
+{"id":11,"categoryid":"分类编号11","categoryname":"类别名称7","categorylevel":2,"categoryremark":"二级分类","_parentId":4}]

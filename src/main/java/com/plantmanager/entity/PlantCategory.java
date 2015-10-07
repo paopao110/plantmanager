@@ -5,10 +5,12 @@ package com.plantmanager.entity;
  *
  */
 public class PlantCategory {
+	private Integer id;
 	private String categoryid;
-	private Integer categorylevel;
 	private String categoryname;
-	
+	private Integer categorylevel;
+	private String categoryremark;
+	private Integer _parentId;
 	public String getCategoryid() {
 		return categoryid;
 	}
@@ -27,6 +29,22 @@ public class PlantCategory {
 	public void setCategoryname(String categoryname) {
 		this.categoryname = categoryname;
 	}
-	
-	
+	public String getCategoryremark() {
+		return categoryremark;
+	}
+	public void setCategoryremark(String categoryremark) {
+		this.categoryremark = categoryremark;
+	}
+	public Integer get_parentId() {
+		return _parentId;
+	}
+	public void set_parentId(Integer _parentId) {
+		this._parentId = _parentId;
+	}
+	public Integer getId() {
+		return id;
+	}
+	public void setId(Integer id) {
+		this.id = id;
+	}
 }

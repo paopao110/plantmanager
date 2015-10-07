@@ -123,7 +123,7 @@ var toolbar = [{
 })(jQuery);
 
 $(function() {
-	var pager = $('#tg').treegrid().treegrid('clientPaging');
+	$('#tg').treegrid().treegrid('clientPaging');
 })
 
 var editingId;
@@ -144,16 +144,23 @@ function save() {
 		t.treegrid('endEdit', editingId);
 		editingId = undefined;
 		var persons = 0;
-		var rows = t.treegrid('getChildren');
-		for (var i = 0; i < rows.length; i++) {
-			var p = parseInt(rows[i].persons);
-			if (!isNaN(p)) {
-				persons += p;
-			}
+		var row = $('#tg').treegrid('getSelected');
+		if(row!=null){
+			$.ajax({
+				type:"POST",
+				data:{"id":row.id,"categoryid":row.categoryid,"categoryname":row.categoryname,
+					"categorylevel":row.categorylevel},
+				url:"updatePlantCategoryInfo",
+				success : function(obj) {
+					if(obj){
+						console.log(obj);
+					}else{
+						
+					}
+				},
+				async : false
+			});
 		}
-		//var frow = t.treegrid('getFooterRows')[0];
-		//frow.persons = persons;
-		t.treegrid('reloadFooter');
 	}
 }
 function cancel() {
@@ -174,28 +181,84 @@ function onContextMenu(e,row){
 		top: e.pageY
 	});
 }
-var idIndex = 100;
+
 function append(){
-	idIndex++;
-	var d1 = new Date();
-	var d2 = new Date();
-	d2.setMonth(d2.getMonth()+1);
+	var index = -1;
+	$.ajax({
+		type:"POST",
+		url:"getLastOrderId",
+		success : function(obj) {
+			index = obj;
+		},
+		async : false
+	});
 	var node = $('#tg').treegrid('getSelected');
-	$('#tg').treegrid('append',{
-		parent: node.id,
-		data: [{
-			id: idIndex,
-			categoryid: 'New Task'+idIndex,
-			categoryname: parseInt(Math.random()*10),
-			categorylevel: parseInt(Math.random()*10),
-			categoryremark: parseInt(Math.random()*10)
-			/*,
-			begin: $.fn.datebox.defaults.formatter(d1),
-			end: $.fn.datebox.defaults.formatter(d2),
-			progress: parseInt(Math.random()*100)*/
-		}]
-	})
+	if(node!=null&&index!=-1){
+		console.log(node);
+		$('#tg').treegrid('append',{
+			parent: node.id,
+			data: [{
+				id: index,
+				categoryid: '分类编号'+index,
+				categoryname: '类别名称'+parseInt(Math.random()*10),
+				categorylevel: node.categorylevel+1,
+				categoryremark: returnremark(node.categorylevel+1)
+			}]
+		})
+		$.ajax({
+			type:"POST",
+			url:"insertPlantCategoryInfo",
+			data:{"categoryid":'分类编号'+index,"categoryname":'类别名称'+parseInt(Math.random()*10),
+				"categorylevel":node.categorylevel+1,"id":node.id},
+			success : function(obj) {
+				console.log(obj);
+			},
+			async : false
+		});
+	}else if(node==null){
+		$('#tg').treegrid('append',{
+			parent: 0,
+			data: [{
+				id: index,
+				categoryid: '分类编号'+index,
+				categoryname: '类别名称'+parseInt(Math.random()*10),
+				categorylevel: 0,
+				categoryremark: returnremark(0)
+			}]
+		})
+		$.ajax({
+			type:"POST",
+			url:"insertPlantCategoryInfo",
+			data:{"categoryid":'分类编号'+index,"categoryname":'类别名称'+parseInt(Math.random()*10),
+				"categorylevel":0,"id":0},
+			success : function(obj) {
+				console.log(obj);
+			},
+			async : false
+		});
+	}
 }
+
+function returnremark(categorylevel){
+	if(categorylevel==undefined){
+		categorylevel=0;
+	}
+	switch(categorylevel){
+		case 0:return "顶级分类";
+		case 1:return "一级分类";
+		case 2:return "二级分类";
+		case 3:return "三级分类";
+		case 4:return "四级分类";
+		case 5:return "五级分类";
+		case 6:return "六级分类";
+		case 7:return "七级分类";
+		case 8:return "八级分类";
+		case 9:return "九级分类";
+		default:
+			return "未知分类";
+	}
+}
+
 function removeIt(){
 	var node = $('#tg').treegrid('getSelected');
 	if (node){

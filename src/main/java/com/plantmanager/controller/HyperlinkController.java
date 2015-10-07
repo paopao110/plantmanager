@@ -2,13 +2,17 @@ package com.plantmanager.controller;
 
 import javax.servlet.http.HttpServletRequest;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import com.plantmanager.service.PlantCategoryService;
+
 @Controller
 public class HyperlinkController {
-	
+	@Autowired
+	private PlantCategoryService plantCategoryService;
 	
 	@RequestMapping(value="admin/linkplantmanager")
 	public String linkPlantManager(@RequestParam(value="type") String type,HttpServletRequest request){

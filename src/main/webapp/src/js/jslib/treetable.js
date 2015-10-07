@@ -217,9 +217,10 @@ function append(){
 		parent: node.id,
 		data: [{
 			id: idIndex,
-			name: 'New Task'+idIndex,
-			persons: parseInt(Math.random()*10),
-			grade: parseInt(Math.random()*10)
+			categoryid: 'New Task'+idIndex,
+			categoryname: parseInt(Math.random()*10),
+			categorylevel: parseInt(Math.random()*10),
+			categoryremark: parseInt(Math.random()*10)
 			/*,
 			begin: $.fn.datebox.defaults.formatter(d1),
 			end: $.fn.datebox.defaults.formatter(d2),
