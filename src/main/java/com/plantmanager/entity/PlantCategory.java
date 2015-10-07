@@ -1,4 +1,5 @@
 package com.plantmanager.entity;
+
 /**
  * @Entity 植物种类 
  * @author Administrator
@@ -11,6 +12,7 @@ public class PlantCategory {
 	private Integer categorylevel;
 	private String categoryremark;
 	private Integer _parentId;
+	private String state;
 	public String getCategoryid() {
 		return categoryid;
 	}
@@ -47,4 +49,12 @@ public class PlantCategory {
 	public void setId(Integer id) {
 		this.id = id;
 	}
+	public String getState() {
+		return state;
+	}
+	public void setState(String state) {
+		this.state = state;
+	}
+	
+	
 }
