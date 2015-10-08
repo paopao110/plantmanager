@@ -269,11 +269,37 @@ function collapse(){
 	var node = $('#tg').treegrid('getSelected');
 	if (node){
 		$('#tg').treegrid('collapse', node.id);
+		$.ajax({
+			type:"POST",
+			data:{"id":node.id,"state":"closed"},
+			url:"updatePlantCategoryInfo",
+			success : function(obj) {
+				if(obj){
+					console.log(obj);
+				}else{
+					
+				}
+			},
+			async : false
+		});
 	}
 }
 function expand(){
 	var node = $('#tg').treegrid('getSelected');
 	if (node){
 		$('#tg').treegrid('expand', node.id);
+		$.ajax({
+			type:"POST",
+			data:{"id":node.id,"state":null},
+			url:"updatePlantCategoryInfo",
+			success : function(obj) {
+				if(obj){
+					console.log(obj);
+				}else{
+					
+				}
+			},
+			async : false
+		});
 	}
 }

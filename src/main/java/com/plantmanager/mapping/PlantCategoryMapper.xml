@@ -15,6 +15,7 @@
 	IF(categorylevel=4,'四级分类',
 	IF(categorylevel=5,'五级分类',
 	'六级分类'))))))  as categoryremark,
+	state,
     _parentId
   </sql>
   
@@ -67,6 +68,9 @@
   		</if>
   		<if test="categoryname!=null">
   			categoryname=#{categoryname,jdbcType=VARCHAR}
+  		</if>
+  		<if test="state!=null">
+  			state=#{state,jdbcType=VARCHAR}
   		</if>
   	</set>
 	where orderid=#{id,jdbcType=INTEGER}
