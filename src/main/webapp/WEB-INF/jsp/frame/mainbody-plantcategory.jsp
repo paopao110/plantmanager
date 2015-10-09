@@ -28,14 +28,16 @@
                 idField: 'id',
                 treeField: 'categoryid',
                 pagination: true,
-                pageSize: 5,
+                pageSize: 10,
                 pageList: [5,10,15,20]">
 	        <thead>
 	            <tr>
 	                <th data-options="field:'categoryid',width:80,editor:'text'">分类编号</th>
 	                <th data-options="field:'categoryname',width:60,editor:'text'">类别名称</th>
-	                <th data-options="field:'categorylevel',width:80,editor:'numberbox'">分类等级</th>
-	                <th data-options="field:'categoryremark',width:80,editor:'text'">备注</th>
+	                <!-- <th data-options="field:'categorylevel',width:80,editor:'numberbox'">分类等级</th> -->
+	                <th data-options="field:'categorylevel',width:80">分类等级</th>
+	                <!-- <th data-options="field:'categoryremark',width:80,editor:'text'">备注</th> -->
+	                <th data-options="field:'categoryremark',width:80">备注</th>
 	            </tr>
 	        </thead>
     	</table>
