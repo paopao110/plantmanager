@@ -3,8 +3,6 @@
 <link rel="stylesheet" type="text/css" href="src/css/themes/default/easyui.css">
 <link rel="stylesheet" type="text/css" href="src/css/themes/default/icon.css">
 <link rel="stylesheet" type="text/css" href="src/css/themes/default/demo.css">
-<script type="text/javascript" src="src/js/jquery-1.11.3.min.js"></script>
-<script type="text/javascript" src="src/js/jquery.easyui.min.js"></script>
 <script type="text/javascript" src="src/js/jslib/treetale-pager.js"></script>
 
 <div class="rig_lm01">

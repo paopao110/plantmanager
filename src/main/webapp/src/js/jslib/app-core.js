@@ -2,11 +2,23 @@
  * 
  */
 $(document).ready(function(){
-	linkhref(0);
+	var menuid = $.cookie("menuid");
+	if(menuid==undefined || menuid ==null){
+		menuid=0;
+	}
+	linkhref(menuid);
+	$(".nav li").each(function() {
+		if($(this).index()==menuid){
+			$(this).parent().find('li.seleli').removeClass('seleli');
+			$(this).addClass("seleli");
+		}
+	});
 	$(".nav li").click(function(){
 		$(this).parent().find('li.seleli').removeClass('seleli');
 		$(this).addClass("seleli");
-		linkhref($(this).index());
+		var menuchangeid=$(this).index();
+		linkhref(menuchangeid);
+		$.cookie("menuid",menuchangeid,{ expires: 1 });
 //		console.info($(this).index());
 	});
 	
