@@ -123,7 +123,7 @@ var toolbar = [{
 })(jQuery);
 
 $(function() {
-	$('#tg').treegrid().treegrid('clientPaging');
+	$('#tg').treegrid().treegrid('clientPaging');  
 })
 
 var editingId;
@@ -302,4 +302,25 @@ function expand(){
 			async : false
 		});
 	}
+}
+function uploadSubCategory(){
+	var node = $('#tg').treegrid('getSelected');
+//	alert(node.id);
+	$.ajaxFileUpload({  
+        url:'uploadSubCategoryFile',  
+        secureuri:false,  
+        fileElementId:'uploadfile',//file标签的id  
+        dataType: 'json',//返回数据的类型  
+        type : 'post',
+        data:{id:node.id,categoryid:node.categoryid,categorylevel:node.categorylevel},//一同上传的数据  
+        success: function (data, status) {  
+            //把图片替换  
+            if(data){
+            	$('#dlg').dialog('close');
+            }
+        },  
+        error: function (data, status, e) {  
+            alert(e);  
+        }  
+    });
 }

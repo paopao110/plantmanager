@@ -4,6 +4,7 @@
 <link rel="stylesheet" type="text/css" href="src/css/themes/default/icon.css">
 <link rel="stylesheet" type="text/css" href="src/css/themes/default/demo.css">
 <script type="text/javascript" src="src/js/jquery.easyui.min.js"></script>
+<script type="text/javascript" src="src/js/ajaxfileupload.js"></script>
 <script type="text/javascript" src="src/js/jslib/treetale-pager.js"></script>
 
 <div class="rig_lm01">
@@ -40,12 +41,31 @@
 	            </tr>
 	        </thead>
     	</table>
+    	<!-- pop menu -->
     	<div id="mm" class="easyui-menu" style="width:120px;">
 			<div onclick="append()" data-options="iconCls:'icon-add'">添加</div>
 			<div onclick="removeIt()" data-options="iconCls:'icon-remove'">删除</div>
 			<div class="menu-sep"></div>
 			<div onclick="collapse()">折叠</div>
 			<div onclick="expand()">展开</div>
+			<div onclick="$('#dlg').dialog('open')" data-options="iconCls:'icon-add'">上传子类</div>
 		</div>
+		<!-- dialog -->
+		<div id="dlg" class="easyui-dialog" title="选择包含子类的文本进行提交！" style="width:350px;padding:10px;"
+            data-options="iconCls: 'icon-save',closed: true,buttons: '#dlg-buttons'">
+            <!-- <form id="ff" method="post" enctype="multipart/form-data">-->
+			<table>
+				<tr>
+					<td>子类文本文件:</td>
+					<td><input name="file" id="uploadfile" type="file"></input></td>
+					<!-- <input id="picToUpload" type="file" name="file" />  -->
+				</tr>
+			</table>
+			<!-- </form>-->
+	    </div>
+	    <div id="dlg-buttons">
+	        <a href="javascript:void(0)" class="easyui-linkbutton" onclick="javascript:uploadSubCategory()">提交</a>
+	        <a href="javascript:void(0)" class="easyui-linkbutton" onclick="javascript:$('#dlg').dialog('close')">关闭</a>
+	    </div>
 	</div>
 </div>

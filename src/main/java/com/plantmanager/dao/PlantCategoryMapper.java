@@ -35,10 +35,18 @@ public interface PlantCategoryMapper {
 	 */
 	public boolean insertPlantCategoryInfo(PlantCategory plantCategory);
 	/**
+	 * 批量插入
+	 * @param plantCategory
+	 * @return
+	 */
+	public boolean insertPlantCategoryInfoByBatch(List<PlantCategory> plantCategory);
+	/**
 	 * 获取最新的OrderID
 	 * @return
 	 */
 	public Integer getLastIndexId();
+	
+	
 	
 	
 }

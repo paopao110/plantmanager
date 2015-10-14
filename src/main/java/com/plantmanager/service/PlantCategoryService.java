@@ -36,4 +36,10 @@ public interface PlantCategoryService {
 	 * @return
 	 */
 	public Integer getLastIndexId();
+	/**
+	 * 自从文件中自动添加子类别
+	 * @param plantCategory
+	 * @return
+	 */
+	public boolean insertPlantCategoryInfoByAuto(List<String> plantCategory,String id,String categoryid,String categorylevel);
 }

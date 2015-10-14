@@ -57,6 +57,16 @@
   	</trim>
   </insert>
   
+  <insert id="insertPlantCategoryInfoByBatch" parameterType="java.util.List">
+  	<selectKey keyProperty="orderid" order="BEFORE" resultType="java.lang.Integer">
+	  	SELECT LAST_INSERT_ID()
+	</selectKey>
+  	insert into tb_plant_category(categorylevel,categoryname,categoryid,_parentId) values
+  	<foreach collection="list" item="item" index="index" separator="," >  
+        (#{plantCategory.categorylevel},#{plantCategory.categoryname},#{plantCategory.categoryid},#{plantCategory._parentId})  
+    </foreach> 
+  </insert>
+  
   <update id="updatePlantCategoryInfo">
   	update tb_plant_category 
   	<set>
@@ -75,6 +85,5 @@
   	</set>
 	where orderid=#{id,jdbcType=INTEGER}
   </update>
-  
-  
+   
 </mapper>
