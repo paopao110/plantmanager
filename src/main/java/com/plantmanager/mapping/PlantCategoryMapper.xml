@@ -57,13 +57,14 @@
   	</trim>
   </insert>
   
-  <insert id="insertPlantCategoryInfoByBatch" parameterType="java.util.List">
+  <insert id="insertPlantCategoryInfoByBatch" parameterType="List">
   	<selectKey keyProperty="orderid" order="BEFORE" resultType="java.lang.Integer">
 	  	SELECT LAST_INSERT_ID()
 	</selectKey>
   	insert into tb_plant_category(categorylevel,categoryname,categoryid,_parentId) values
+  	
   	<foreach collection="list" item="item" index="index" separator="," >  
-        (#{plantCategory.categorylevel},#{plantCategory.categoryname},#{plantCategory.categoryid},#{plantCategory._parentId})  
+        (#{item.categorylevel},#{item.categoryname},#{item.categoryid},#{item._parentId})  
     </foreach> 
   </insert>
   
