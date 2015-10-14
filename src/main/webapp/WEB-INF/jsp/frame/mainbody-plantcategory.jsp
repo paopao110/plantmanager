@@ -53,15 +53,12 @@
 		<!-- dialog -->
 		<div id="dlg" class="easyui-dialog" title="选择包含子类的文本进行提交！" style="width:350px;padding:10px;"
             data-options="iconCls: 'icon-save',closed: true,buttons: '#dlg-buttons'">
-            <!-- <form id="ff" method="post" enctype="multipart/form-data">-->
 			<table>
 				<tr>
-					<td>子类文本文件:</td>
+					<td>&nbsp;&nbsp;</td>
 					<td><input name="file" id="uploadfile" type="file"></input></td>
-					<!-- <input id="picToUpload" type="file" name="file" />  -->
 				</tr>
 			</table>
-			<!-- </form>-->
 	    </div>
 	    <div id="dlg-buttons">
 	        <a href="javascript:void(0)" class="easyui-linkbutton" onclick="javascript:uploadSubCategory()">提交</a>
