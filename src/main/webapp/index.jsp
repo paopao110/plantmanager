@@ -5,7 +5,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="description" content="人力资源管理平台" />
 <title>植物管理平台</title>
-<link type="text/css" rel="stylesheet" href="css/css.css" />
+<link type="text/css" rel="stylesheet" href="src/css/css.css" />
 <link rel="stylesheet" type="text/css" href="src/css/themes/default/easyui.css">
 <link rel="stylesheet" type="text/css" href="src/css/themes/default/icon.css">
 <link rel="stylesheet" type="text/css" href="src/css/themes/default/demo.css">

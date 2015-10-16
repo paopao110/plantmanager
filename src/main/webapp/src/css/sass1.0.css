@@ -1,0 +1,190 @@
+/*sass1.0*/
+.s_top{ height:30px; line-height:30px; background-color:#f9f9f9;}
+.s_top_l{ float:left;}
+.s_top_r{ float:right}
+.s_head{ height:90px; border-bottom:#ddd solid 1px; position:relative}
+.s_head_l{ float:left; padding-top:20px;}
+.s_head_r{ float:right; padding-top:38px;}
+.s_head_r a , .s_top_r a{ color:#666;}
+.s_head_r a:hover , .s_top_r a:hover{ color:#ff6600}
+.s_head_r em , .s_top_r em{ color:#999; padding:0px 10px;}
+.s_head_nav{ float:right; font-size:16px; height:38px; padding-top:25px;}
+.s_head_nav li { float:left}
+.s_head_nav li a{ display:block; height:36px; line-height:36px; padding:0px 15px; margin-left:20px; float:left;border-bottom:#fff solid 2px;}
+.s_head_nav li a:hover{ color:#3181ef; border-bottom:#3181ef solid 2px;}
+.s_head_nav .nav_t a{ color:#3181ef; border-bottom:#3181ef solid 2px;}
+.s_head_nav li a.c9:hover{ color:#999;border-bottom:#fff solid 2px; cursor:default}
+.s_login{ background:url(../images/sass1.0/s_bg.jpg) no-repeat center center; position:relative; height:500px;}
+
+.login_nei{ width: 240px;
+padding-left: 928px;
+padding-top: 160px;
+float: left;
+position: relative;}
+.login_other{height:280px; padding-left:80px; width:240px; height:160px;float:left}
+.login_other h3{line-height:50px; padding-left:10px;}
+.ui-form-title{ font-size:18px; line-height:40px; padding-bottom:10px;}
+.ui-form-item{ padding-bottom:10px;}
+.login_nei .input-panel {
+	margin-bottom:5px;
+	*margin-bottom:15px;
+width:238px;
+height:40px;
+border: 1px solid #dbdbdb;
+border-radius:2px;
+float: left;
+position: relative;
+cursor: default;
+}
+.input-panel span {
+float: left;
+width:52px;
+height:40px;
+display:inline-block;
+color:#666
+}
+.input-title-user{ background-position:0px -140px;}
+.input-title-password{ background-position:-55px -140px;}
+.login_nei  .inp {
+outline: 0;
+border: 0 none;
+float: left;
+margin: 4px 0 0 0px;
+*margin:6px 0 0 0px;
+width: 173px;
+height: 20px;
+font-size: 14px;
+padding: 5px;
+color:#666
+}
+
+.ui-form-item:after {
+content: "\0020";
+display: block;
+height: 0;
+clear: both;
+}
+.remember-panel {
+	width:240px;
+height: 20px;
+position: relative;
+color:#999;
+}
+.forget-link {
+position: absolute;
+right: 3px;
+top: 0;
+font-size: 12px;
+}
+.remember-panel .rem_reg{ float:right; color:#999}
+.login_button , .input-panel span  {background-image:url(../images/sass1.0/s_icon.png);}
+.login_button{
+display: inline-block;
+vertical-align: middle;
+zoom: 1;
+color: #fff;
+margin: 0;
+border:none;
+text-decoration: none;
+text-align: center;
+cursor: pointer;
+outline: 0;
+width:240px;
+height:44px;
+font-family:"Microsoft Yahei";}
+
+.submit-btn{ background-position:0px 0px;}
+.submit-btn:hover{ background-position:0px -45px;}
+.submit-btn:active{background-position:0px -90px;}
+.load-btn{background-position:0px -266px; cursor:default; color:#666}
+.vip-btn{ background-position:0px -82px;}
+.vip-btn:hover{ background-position:0px -123px;}
+.input-focus{ -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 2px rgba(82, 168, 236, 0.6); -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 4px rgba(82, 168, 236, 0.6); box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 2px rgba(82, 168, 236, 0.6); border:#71c0fd solid 1px !important;}
+.loginError {
+background: #fff8d1;
+border: #f0e4d6 solid 1px;
+color: #ff6600;
+height: 30px;
+border-radius:2px;
+width:228px;
+padding-left: 10px;
+line-height: 30px;
+display: none;
+position: absolute;
+top: 125px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.s_js p{ padding:30px 0px 30px 60px;}
+
+
+
+
+
+
+.s_footer{ height:60px; line-height:60px; background-color:#f7f8f9; color:#666; text-align:center}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
