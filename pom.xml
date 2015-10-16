@@ -11,6 +11,7 @@
 	  <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
   	  <!-- 设置 Spring 的版本 --> 
       <org.springframework.version>4.1.4.RELEASE</org.springframework.version>
+      <org.springframework.security.version>4.0.2.RELEASE</org.springframework.security.version>
   </properties>
   <dependencies>
     <dependency>
@@ -37,6 +38,26 @@
 	    <groupId>org.springframework</groupId>
 	    <artifactId>spring-jdbc</artifactId>
 	    <version>${org.springframework.version}</version>
+	</dependency>
+	<dependency>
+	    <groupId>org.springframework.security</groupId>
+	    <artifactId>spring-security-core</artifactId>
+	    <version>${org.springframework.security.version}</version>
+	</dependency>
+	<dependency>
+	    <groupId>org.springframework.security</groupId>
+	    <artifactId>spring-security-config</artifactId>
+	    <version>${org.springframework.security.version}</version>
+	</dependency>
+	<dependency>
+	    <groupId>org.springframework.security</groupId>
+	    <artifactId>spring-security-taglibs</artifactId>
+	    <version>${org.springframework.security.version}</version>
+	</dependency>
+	<dependency>
+	    <groupId>org.springframework.security</groupId>
+	    <artifactId>spring-security-web</artifactId>
+	    <version>${org.springframework.security.version}</version>
 	</dependency>
 	<dependency>
 	    <groupId>org.mybatis</groupId>
